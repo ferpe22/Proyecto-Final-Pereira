@@ -105,42 +105,42 @@ input:focus {
     padding: 30px;
 }
 
-.main__silvi {
-    font-family: "Itim", sans-serif;
-    color: black;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    box-sizing: content-box;
-}
-
 .title__silvi{
     font-family: "Lobster", sans-serif;
     /* font-size: 85px; */
-    font-size: 350%;
+    font-size: 450%;
     font-weight: 1000;
     margin-top: 0px;
     margin-bottom: 5px;
     letter-spacing: 20px;
     height: auto;
-    
 }
 
 .grid__main{
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
+        "titulo titulo titulo" 
         "banner banner banner"
         "productos productos productos"
         "cake cupcake cookies"
         "localizacion localizacion localizacion";
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 400px 100px 300px 600px;
+    grid-template-rows: 300px 400px 100px 300px 600px;
     align-items: center;
     justify-items: center;
     text-align: center;
 }
-
+.main__silvi {
+    font-family: "Itim", sans-serif;
+    color: black;
+    text-align: center;
+    /* display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-sizing: content-box; */
+    grid-area: titulo;
+    width: 100%;
+}
 .carrusel{
     grid-area: banner;
     display: flex;
@@ -462,7 +462,7 @@ input:focus {
 }
 
 .icons{
-    width: 30%;
+    width: 20%;
 }
 
 footer {
@@ -490,26 +490,38 @@ footer {
     }
     .main__silvi{
         text-align: center;
-        background-image: url("source/img/slider3.png");
+        /* background-image: url("source/img/slider3.png"); */
     }
     
     .grid__main{
         display: grid;
         grid-template-areas: 
+            "titulo"
             "productos"
             "cake"
             "cupcake"
             "cookies"
             "localizacion";
         grid-template-columns: 100%;
-        grid-template-rows: 100px 1fr 1fr 1fr 1fr ;
+        grid-template-rows: 1fr 100px 1fr 1fr 1fr 1fr ;
         grid-row-gap: 30px;
         align-items: center;
         justify-items: center;
         text-align: center;
         margin-top: 60px;
     }
-    
+    .title__silvi{
+        font-weight: bold;
+        letter-spacing: 0px;
+        font-size: 50px;
+    }
+    .parrafo__index{
+        width: 100%;
+        font-size: 17px;
+        letter-spacing: 0px;
+        margin: auto;
+        
+    }
     .carrusel{
         display: none;
     }
@@ -536,11 +548,23 @@ footer {
     .seguinos{
         letter-spacing: 0;
     }
+    h5{
+        font-size: 1rem;
+    }
 
     .tabla__sabores{
         font-size: 65%;
         margin: auto;
         
+    }
+
+    .title__sections{
+        font-size: 35px;
+        letter-spacing: 5px;
+    }
+    .parrafo__productos{
+        letter-spacing: 0;
+        font-size: 15px;
     }
 
     footer {
