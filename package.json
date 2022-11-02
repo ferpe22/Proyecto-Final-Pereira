@@ -1,0 +1,27 @@
+{
+  "name": "proyecto-silvana-cupcake",
+  "version": "1.0.0",
+  "description": "Este es el proyecto entregable para el curso de Desarrollo Web de Coderhouse",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "sass sources/styles/scss/styles.scss sources/styles/scss/styles.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ferpe22/PreEntrega2-Pereira.git"
+  },
+  "keywords": [
+    "sass"
+  ],
+  "author": "ferpe22",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ferpe22/PreEntrega2-Pereira/issues"
+  },
+  "homepage": "https://github.com/ferpe22/PreEntrega2-Pereira#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
