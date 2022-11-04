@@ -1,10 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Acme&family=Outfit:wght@200;400;500;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Acme&family=Lobster&family=Outfit:wght@200;400;500;800&display=swap");
+h1, .grid__main .home__title .title__silvi {
+  font-family: "Acme", sans-serif;
+  color: rgb(25, 25, 25);
+  font-size: 35px;
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: 20px;
+  height: auto;
+}
+
+h2 {
+  background-color: #9b5377;
+  color: whitesmoke;
+  font-family: "Lobster", sans-serif;
+  border-radius: 3px;
+  padding: 5px;
+  font-style: italic;
+  box-sizing: content-box;
+  letter-spacing: 7px;
+}
+
+h3 {
+  color: rgb(25, 25, 25);
+  font-family: "Acme", sans-serif;
+  font-size: 150%;
+  margin-top: 0.5rem;
+  justify-items: center;
+}
+
+h5 {
+  font-family: "Itim", sans-serif;
+  color: rgb(25, 25, 25);
+}
+
+p, .historia .historia__parrafo, .desc__prod {
+  font-family: "Itim", sans-serif;
+  font-size: 20px;
+}
+
 * {
   box-sizing: border-box;
 }
 
+/** SECCION HEADER **/
 .barra_busqueda {
   max-width: 100%;
   padding-right: 15px;
@@ -12,8 +52,10 @@
   text-align: right;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: end;
+  align-content: 0;
+  justify-items: 0;
+  align-items: center;
 }
 .barra_busqueda input {
   width: 25%;
@@ -28,11 +70,12 @@
   outline: none;
 }
 
-.logo {
+/** SECCION BARRA DE NAVEGACION **/
+.SC_logo {
   width: 100px;
   border-radius: 40px;
 }
-.logo:hover {
+.SC_logo:hover {
   animation: rebotar 0.4s infinite;
 }
 
@@ -71,11 +114,7 @@
     transform: translate(0px, 12px);
   }
 }
-.nav__logo {
-  width: 50px;
-}
-
-#menu ul {
+ul {
   font-family: "Acme", sans-serif;
   margin: 0;
   margin-top: 10px;
@@ -83,37 +122,23 @@
   padding-left: 0px;
 }
 
-#menu li {
-  text-align: center;
-  display: inline;
-  display: flex;
-}
-
 #navbarNav {
   justify-content: space-evenly;
 }
-
-.nav_icons {
+#navbarNav .nav_icons {
   margin: 10px;
 }
+#navbarNav .nav__logo {
+  width: 50px;
+}
 
-#main-body {
+/** SECCION HOME-INDEX **/
+#img__background {
   background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(https://images.unsplash.com/photo-1551404973-7dec6ee9bba7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 30px;
-}
-
-.title__silvi {
-  font-family: "Lobster", sans-serif;
-  /* font-size: 85px; */
-  font-size: 450%;
-  font-weight: 1000;
-  margin-top: 0px;
-  margin-bottom: 5px;
-  letter-spacing: 20px;
-  height: auto;
 }
 
 .grid__main {
@@ -125,96 +150,76 @@
   justify-items: center;
   text-align: center;
 }
-
-.main__silvi {
+.grid__main .home__title {
   font-family: "Itim", sans-serif;
-  color: black;
+  color: rgb(25, 25, 25);
   text-align: center;
-  /* display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  box-sizing: content-box; */
   grid-area: titulo;
   width: 100%;
 }
-
-.carrusel {
+.grid__main .home__title .title__silvi {
+  font-family: "Lobster", sans-serif;
+  color: rgb(25, 25, 25);
+  font-size: 450%;
+  font-weight: 1000;
+}
+.grid__main .carrusel {
   grid-area: banner;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
 }
-
-.carrusel__img {
+.grid__main .carrusel .carrusel__img {
   height: auto;
   width: 100%;
   max-width: 600px;
   border-radius: 5px;
 }
-.carrusel__img:hover {
+.grid__main .carrusel .carrusel__img:hover {
   filter: sepia(80%);
   transition: all 0.7s ease-in-out;
 }
-
-.nuestrosProductos {
+.grid__main .nuestrosProductos {
   grid-area: productos;
-  background-color: #9b5377;
-  color: aliceblue;
-  font-family: "Lobster", sans-serif;
-  border-radius: 3px;
-  padding: 5px;
-  font-style: italic;
-  box-sizing: content-box;
-  letter-spacing: 7px;
 }
-
-.left {
+.grid__main .left {
   grid-area: cake;
   padding: 10px;
 }
-
-.middle {
+.grid__main .middle {
   grid-area: cupcake;
   padding: 10px;
 }
-
-.right {
+.grid__main .right {
   grid-area: cookies;
   padding: 10px;
 }
-
-.gps {
+.grid__main .gps {
   grid-area: localizacion;
-}
-
-.centrar {
-  display: flex;
-  flex-direction: column;
-  margin-right: 1rem;
-}
-
-.estilo {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
+  align-content: 0;
+  justify-items: 0;
+  align-items: center;
+  flex-wrap: wrap;
 }
-
-.mapa {
+.grid__main .gps .centrar {
+  display: flex;
+  flex-direction: column;
+  justify-content: 0;
+  align-content: 0;
+  justify-items: 0;
+  align-items: 0;
+  margin-right: 1rem;
+}
+.grid__main .gps iframe {
   width: 400px;
   height: 300px;
 }
 
-.estilo__titulo {
-  font-family: "Acme", sans-serif;
-  font-size: 150%;
-  margin-top: 0.5rem;
-  justify-items: center;
-}
-
-.estilo__parrafo {
-  font-family: "Itim", sans-serif;
+/** Estilos de la seccion Nuestros productos - Index para los 3 tipos de produtos detalladas  **/
+.desc__prod {
   font-size: 15px;
 }
 
@@ -227,56 +232,34 @@
   background-color: #9b5377;
   border-color: #9b5377;
 }
-
 .btn-style:hover {
   background-color: #af6489;
   border-color: #af6489;
 }
 
-.title__sections {
-  font-family: "Acme", sans-serif;
-  font-size: 35px;
-  margin-top: 0px;
-  margin-bottom: 0;
-  letter-spacing: 20px;
-}
-
-.parrafo__index {
-  font-size: 20px;
-  letter-spacing: 2px;
-  /* padding-left: 30px;
-  padding-right: 30px; */
-  margin: auto;
-  max-width: 800px;
-}
-
-.fotos__main {
+/*** SECCIONES ***/
+.intro_sections {
   display: flex;
-  flex-direction: row;
-  list-style-type: none;
-  align-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
-.fotos__main__image {
-  width: 200px;
-  height: 200px;
-  border-radius: 15px;
-  border-style: outset;
-  margin: 20px;
+/** SECCION HISTORIA **/
+.historia {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  justify-items: 0;
+  align-items: 0;
+}
+.historia .historia__parrafo {
+  font-size: 100%;
 }
 
-.parrafo__historia {
-  font-size: 20px;
-  letter-spacing: 10px;
-  padding-left: 120px;
-  padding-right: 120px;
-}
-
-.cliente {
-  text-decoration: underline;
-  font-size: 28px;
-}
-
+/** SECCION PRODUCTOS **/
 .parrafo__productos {
   font-size: 20px;
   letter-spacing: 10px;
@@ -287,13 +270,15 @@
 .productos {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-around;
+  align-content: 0;
+  justify-items: 0;
+  align-items: 0;
+  flex-wrap: wrap;
   text-align: center;
   margin-top: 30px;
 }
-
-.productos__image {
+.productos .productos__image {
   width: 200px;
   height: 200px;
   border-radius: 15px;
@@ -301,49 +286,14 @@
   margin: 20px;
 }
 
-.galeria {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  list-style-type: none;
-  align-items: center;
-}
-
-.galeria__img {
-  width: 50%;
-  height: 45%;
-  max-width: 400px;
-  opacity: 85%;
-  border-radius: 15px;
-  margin: 5px;
-}
-
-.galeria__img:hover {
-  opacity: 100%;
-}
-
-.detalle__producto {
-  list-style: none;
-  display: inline-block;
-  margin-left: 5px;
-  margin-right: 0px;
-  padding-left: 0px;
-  padding-right: 130px;
-  font-family: "Itim", sans-serif;
-  font-size: 20px;
-}
-
 .sabores {
   font-family: "Itim", sans-serif;
   text-align: center;
   margin-top: 50px;
 }
-
-.sabores--titulo {
+.sabores .sabores--titulo {
   background-color: #9b5377;
-  color: aliceblue;
+  color: whitesmoke;
   font-family: "Lobster", sans-serif;
   border-radius: 3px;
   padding: 5px;
@@ -351,12 +301,11 @@
   box-sizing: content-box;
   letter-spacing: 7px;
 }
-
-.tabla__sabores {
+.sabores .tabla__sabores {
   font-size: 100%;
   margin: auto;
   border-style: solid;
-  border-color: black;
+  border-color: rgb(25, 25, 25);
   border-collapse: separate;
   border-spacing: 30px 20px;
   font-style: italic;
@@ -364,34 +313,93 @@
   box-sizing: content-box;
 }
 
+/** SECCION CLIENTES **/
 .grid_clientes {
   display: grid;
   grid-template-areas: " cl1 cl2 " " cl3 cl4 ";
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 300px 300px;
-  align-items: center;
+  grid-column-gap: 7%;
   text-align: center;
   margin-top: 40px;
 }
-
-.cliente1 {
+.grid_clientes .cliente1 {
   grid-area: cl1;
 }
-
-.cliente2 {
+.grid_clientes .cliente2 {
   grid-area: cl2;
 }
-
-.cliente3 {
+.grid_clientes .cliente3 {
   grid-area: cl3;
 }
-
-.cliente4 {
+.grid_clientes .cliente4 {
   grid-area: cl4;
 }
 
-.redes__main {
+/** SECCION GALERIA **/
+.galeria {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: 0;
+  justify-content: space-evenly;
+  align-content: 0;
+  justify-items: 0;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.galeria .galeria__img {
+  width: 50%;
+  height: 45%;
+  max-width: 400px;
+  opacity: 85%;
+  border-radius: 15px;
+  margin: 5px;
+}
+.galeria .galeria__img:hover {
+  opacity: 100%;
+}
+
+/** SECCION FORMULARIO PARA COTIZACION **/
+.formulario {
   font-family: "Itim", sans-serif;
+  width: 100%;
+  max-width: 60%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  box-shadow: 5px 15px 50px #000;
+}
+.formulario .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: 0;
+  align-content: 0;
+  justify-items: 0;
+  align-items: 0;
+  width: 100%;
+  padding: 5px;
+}
+.formulario .form .form_area {
+  border-style: solid;
+  border-color: whitesmoke;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+}
+.formulario .form .button {
+  font-family: "Acme", sans-serif;
+  letter-spacing: 3px;
+  background-color: #9b5377;
+  color: whitesmoke;
+  width: 100%;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+/** SECCION REDES SOCIALES **/
+.redes__main {
   display: grid;
   grid-template-areas: " follow fb ig " " follow yt tt ";
   grid-template-columns: 2fr 1fr 1fr;
@@ -399,88 +407,68 @@
   grid-row-gap: 15px;
   margin-top: 50px;
   padding: 20px;
+  align-items: center;
+  justify-items: center;
 }
-
-.seguinos {
+.redes__main .seguinos {
   grid-area: follow;
-  align-self: center;
-  letter-spacing: 8px;
 }
-
-.facebook {
+.redes__main .facebook {
   grid-area: fb;
 }
-
-.instagram {
+.redes__main .instagram {
   grid-area: ig;
 }
-
-.youtube {
+.redes__main .youtube {
   grid-area: yt;
 }
-
-.tiktok {
+.redes__main .tiktok {
   grid-area: tt;
 }
-
-.formulario {
-  font-family: "Itim", sans-serif;
-  width: 450px;
-  margin: auto;
-  border-radius: px;
-  margin-top: 50px;
-  margin-bottom: 100px;
-  box-shadow: 5px 15px 50px #000;
-}
-
-.form {
-  padding: 5px;
-  border: none;
-  color: black;
-}
-
-.form_area {
-  border-style: solid;
-  border-color: #000;
-  width: 90%;
-  padding: 10px;
-}
-
-.button {
-  font-family: "Acme", sans-serif;
-  letter-spacing: 3px;
-  background-color: #9b5377;
-  color: white;
-  margin-left: 170px;
-}
-
-.icons {
+.redes__main .icons {
   width: 20%;
 }
 
+/** SECCION FOOTER **/
 footer {
   font-family: "Itim", sans-serif;
   font-size: 10px;
   font-style: italic;
-  color: white;
+  color: whitesmoke;
   text-align: center;
   background-color: #38bc46;
   padding: 7px;
   letter-spacing: 3px;
 }
 
-/* Seccion responsiva */
+/** SECCION RESPONSIVA **/
 @media screen and (max-width: 480px) {
+  h1, .grid__main .home__title .title__silvi {
+    font-family: "Acme", sans-serif;
+    color: rgb(25, 25, 25);
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    letter-spacing: 0;
+    height: auto;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  p, .desc__prod, .historia .historia__parrafo {
+    width: 100%;
+    font-size: 1rem;
+    letter-spacing: 0px;
+    margin: auto;
+  }
+  /** Barra Busqueda **/
   .barra_busqueda {
     display: none;
   }
   input {
     width: 60%;
   }
-  .main__silvi {
-    text-align: center;
-    /* background-image: url("source/img/slider3.png"); */
-  }
+  /** Home-Index **/
   .grid__main {
     display: grid;
     grid-template-areas: "titulo" "productos" "cake" "cupcake" "cookies" "localizacion";
@@ -490,25 +478,30 @@ footer {
     align-items: center;
     justify-items: center;
     text-align: center;
-    margin-top: 60px;
   }
-  .title__silvi {
-    font-weight: bold;
-    letter-spacing: 0px;
-    font-size: 50px;
-  }
-  .parrafo__index {
+  .grid__main .home__title {
+    font-family: "Itim", sans-serif;
+    color: rgb(25, 25, 25);
+    text-align: center;
+    grid-area: titulo;
     width: 100%;
-    font-size: 17px;
-    letter-spacing: 0px;
-    margin: auto;
+  }
+  .grid__main .home__title .title__silvi {
+    font-family: "Lobster", sans-serif;
+    color: rgb(25, 25, 25);
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 0;
+    margin-bottom: 7px;
   }
   .carrusel {
     display: none;
   }
+  /** Mapa **/
   iframe {
     display: none;
   }
+  /** Redes Sociales **/
   .redes__main {
     display: grid;
     grid-template-areas: " follow follow follow follow " " fb ig yt tt ";
@@ -522,30 +515,79 @@ footer {
     width: 100%;
     letter-spacing: 0;
   }
-  .seguinos {
+  .redes__main .seguinos {
     letter-spacing: 0;
   }
-  h5 {
-    font-size: 1rem;
+  /** Productos **/
+  .sabores {
+    font-family: "Itim", sans-serif;
+    text-align: center;
+    margin-top: 50px;
   }
-  .tabla__sabores {
-    font-size: 65%;
+  .sabores .sabores--titulo {
+    background-color: #9b5377;
+    color: whitesmoke;
+    font-family: "Lobster", sans-serif;
+    border-radius: 3px;
+    padding: 5px;
+    font-style: italic;
+    box-sizing: content-box;
+    letter-spacing: 7px;
+  }
+  .sabores .tabla__sabores {
+    font-size: 40%;
     margin: auto;
+    border-style: solid;
+    border-color: rgb(25, 25, 25);
+    border-collapse: separate;
+    border-spacing: 30px 20px;
+    font-style: italic;
+    background-color: #dab6c8;
+    box-sizing: content-box;
   }
-  .title__sections {
-    font-size: 35px;
-    letter-spacing: 0px;
+  /** Formulario **/
+  .formulario {
+    font-family: "Itim", sans-serif;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 5px 15px 50px #000;
   }
-  .parrafo__productos {
-    letter-spacing: 0;
-    font-size: 15px;
+  .formulario .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: 0;
+    align-content: 0;
+    justify-items: 0;
+    align-items: 0;
+    width: 100%;
+    padding: 5px;
   }
+  .formulario .form .form_area {
+    border-style: solid;
+    border-color: whitesmoke;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+  }
+  .formulario .form .button {
+    font-family: "Acme", sans-serif;
+    letter-spacing: 3px;
+    background-color: #9b5377;
+    color: whitesmoke;
+    width: 100%;
+    border-width: 1px;
+    border-radius: 5px;
+  }
+  /** Footer **/
   footer {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-content: 0;
+    justify-items: 0;
+    align-items: 0;
     font-size: 7px;
     letter-spacing: 0;
-    justify-content: space-between;
   }
 }
 
