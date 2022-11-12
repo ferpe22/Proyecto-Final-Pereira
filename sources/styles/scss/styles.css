@@ -167,7 +167,9 @@ ul {
   grid-area: banner;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   flex-wrap: nowrap;
+  width: 50%;
 }
 .grid__main .carrusel .carrusel__img {
   height: auto;
