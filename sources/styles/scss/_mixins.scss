@@ -1,0 +1,14 @@
+@mixin display-flex($tipo, $direction, $justifyC, $alignC, $justifyI, $alignI) {
+    display: $tipo;
+    flex-direction: $direction;
+    justify-content: $justifyC;
+    align-content: $alignC;
+    justify-items: $justifyI;
+    align-items: $alignI;
+}
+
+@mixin display-flex-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

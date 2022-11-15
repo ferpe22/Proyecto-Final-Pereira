@@ -1,0 +1,42 @@
+h1 {
+    font-family: "Acme", sans-serif;
+    color: $color-font;
+    font-size: 35px;
+    margin-top: 0;
+    margin-bottom: 0;
+    letter-spacing: 20px;
+    height: auto;
+}
+
+h2 {
+    background-color: $color-1-group-2;
+    color: $color-font-h2;
+    font-family: "Lobster", sans-serif;
+    border-radius: 3px;
+    padding: 5px;
+    font-style: italic;
+    box-sizing: content-box;
+    letter-spacing: 7px;
+}
+
+h3 {
+    color: $color-font;
+    font-family: "Acme", sans-serif;
+    font-size: 150%;
+    margin-top: .5rem;
+    justify-items: center;
+}
+
+h5 {
+    font-family: "Itim", sans-serif;
+    color: $color-font;
+}
+
+p {
+    font-family: "Itim", sans-serif;
+    font-size: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}

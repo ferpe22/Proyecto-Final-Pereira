@@ -1,49 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Acme&family=Outfit:wght@200;400;500;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Acme&family=Lobster&family=Outfit:wght@200;400;500;800&display=swap");
-h1, .grid__main .home__title .title__silvi {
-  font-family: "Acme", sans-serif;
-  color: rgb(25, 25, 25);
-  font-size: 35px;
-  margin-top: 0;
-  margin-bottom: 0;
-  letter-spacing: 20px;
-  height: auto;
-}
-
-h2 {
-  background-color: #9b5377;
-  color: whitesmoke;
-  font-family: "Lobster", sans-serif;
-  border-radius: 3px;
-  padding: 5px;
-  font-style: italic;
-  box-sizing: content-box;
-  letter-spacing: 7px;
-}
-
-h3 {
-  color: rgb(25, 25, 25);
-  font-family: "Acme", sans-serif;
-  font-size: 150%;
-  margin-top: 0.5rem;
-  justify-items: center;
-}
-
-h5 {
-  font-family: "Itim", sans-serif;
-  color: rgb(25, 25, 25);
-}
-
-p, .historia .historia__parrafo, .desc__prod {
-  font-family: "Itim", sans-serif;
-  font-size: 20px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 /** SECCION HEADER **/
 .barra_busqueda {
   max-width: 100%;
@@ -130,6 +87,61 @@ ul {
 }
 #navbarNav .nav__logo {
   width: 50px;
+}
+
+/** SECCION FOOTER **/
+footer {
+  font-family: "Itim", sans-serif;
+  font-size: 10px;
+  font-style: italic;
+  color: whitesmoke;
+  text-align: center;
+  background-color: #38bc46;
+  padding: 7px;
+  letter-spacing: 3px;
+}
+
+h1, .grid__main .home__title .title__silvi {
+  font-family: "Acme", sans-serif;
+  color: rgb(25, 25, 25);
+  font-size: 35px;
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: 20px;
+  height: auto;
+}
+
+h2 {
+  background-color: #9b5377;
+  color: whitesmoke;
+  font-family: "Lobster", sans-serif;
+  border-radius: 3px;
+  padding: 5px;
+  font-style: italic;
+  box-sizing: content-box;
+  letter-spacing: 7px;
+}
+
+h3 {
+  color: rgb(25, 25, 25);
+  font-family: "Acme", sans-serif;
+  font-size: 150%;
+  margin-top: 0.5rem;
+  justify-items: center;
+}
+
+h5 {
+  font-family: "Itim", sans-serif;
+  color: rgb(25, 25, 25);
+}
+
+p, .historia .historia__parrafo, .desc__prod {
+  font-family: "Itim", sans-serif;
+  font-size: 20px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /** SECCION HOME-INDEX **/
@@ -250,17 +262,9 @@ ul {
 
 /** SECCION HISTORIA **/
 .historia {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  justify-items: 0;
-  align-items: 0;
+  padding-left: 30px;
+  padding-right: 30px;
 }
-.historia .historia__parrafo {
-  font-size: 100%;
-}
-
 /** SECCION PRODUCTOS **/
 .parrafo__productos {
   font-size: 20px;
@@ -431,18 +435,6 @@ ul {
   width: 20%;
 }
 
-/** SECCION FOOTER **/
-footer {
-  font-family: "Itim", sans-serif;
-  font-size: 10px;
-  font-style: italic;
-  color: whitesmoke;
-  text-align: center;
-  background-color: #38bc46;
-  padding: 7px;
-  letter-spacing: 3px;
-}
-
 /** SECCION RESPONSIVA **/
 @media screen and (max-width: 480px) {
   h1, .grid__main .home__title .title__silvi {
@@ -510,7 +502,7 @@ footer {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-row-gap: 15px;
-    margin-top: 50px;
+    margin-top: 40px;
     justify-self: center;
     text-align: center;
     padding: 20px;
@@ -519,6 +511,10 @@ footer {
   }
   .redes__main .seguinos {
     letter-spacing: 0;
+  }
+  /** Hstoria **/
+  .historia .historia__parrafo {
+    font-size: 80%;
   }
   /** Productos **/
   .sabores {
@@ -537,15 +533,8 @@ footer {
     letter-spacing: 7px;
   }
   .sabores .tabla__sabores {
-    font-size: 40%;
-    margin: auto;
-    border-style: solid;
-    border-color: rgb(25, 25, 25);
-    border-collapse: separate;
-    border-spacing: 30px 20px;
-    font-style: italic;
-    background-color: #dab6c8;
-    box-sizing: content-box;
+    font-size: 65%;
+    border-spacing: 15px 5px;
   }
   /** Formulario **/
   .formulario {
@@ -583,12 +572,12 @@ footer {
   /** Footer **/
   footer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-content: 0;
     justify-items: 0;
     align-items: 0;
-    font-size: 7px;
+    font-size: 9px;
     letter-spacing: 0;
   }
 }
